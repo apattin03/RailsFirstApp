@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "Welcome to the My Ruby App!"
-      redirect_back_or user
+      render 'show'
     else
       render 'new'
     end
